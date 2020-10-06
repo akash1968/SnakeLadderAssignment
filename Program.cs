@@ -12,10 +12,13 @@ namespace SnakeLadderAssignment
             int playerPosition = 0;
             Console.WriteLine("Player is at position : " + playerPosition);
             Random ran = new Random();
-
+            int noOfTimesDiceRolled = 0;
             while (playerPosition != 100)
             {
+
                 int die = ran.Next(1, 7);
+                noOfTimesDiceRolled++;
+                Console.WriteLine("Number of times dice rolled : " + noOfTimesDiceRolled);
                 int option = ran.Next(0, 3);
                 Console.WriteLine("Dice roll gives : " + die);
 
@@ -41,6 +44,7 @@ namespace SnakeLadderAssignment
 
 
                 Console.WriteLine("Player is now at position : " + playerPosition);
+                Console.WriteLine(" ");
             }
         }
     }

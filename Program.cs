@@ -18,6 +18,7 @@ namespace SnakeLadderAssignment
                 int die = ran.Next(1, 7);
                 int option = ran.Next(0, 3);
                 Console.WriteLine("Dice roll gives : " + die);
+
                 switch (option)
                 {
                     case SNAKE:
@@ -35,6 +36,10 @@ namespace SnakeLadderAssignment
                 }
                 if (playerPosition < 0)
                     playerPosition = 0;
+                if (playerPosition > 100)
+                    playerPosition = playerPosition - die;
+
+
                 Console.WriteLine("Player is now at position : " + playerPosition);
             }
         }
